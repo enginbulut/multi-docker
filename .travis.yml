@@ -3,7 +3,7 @@ sudo: required
 services: 
   - docker
 before_install:
-  - docker build -t enginbulut/react_test -f ./client/Dockerfile.dev ./client
+  - docker build -t enginbulut/react-test -f ./client/Dockerfile.dev ./client
 script:
   - docker run -e CI=true enginbulut/react-test npm test
 after_success:
